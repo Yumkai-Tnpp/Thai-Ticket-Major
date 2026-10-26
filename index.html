@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Ticket Major</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font (matched to Figma: Be Vietnam Pro, + Noto Sans Thai fallback for Thai glyphs) -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- font awsome -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css' integrity='sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==' crossorigin='anonymous'/>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navbar -->
+         <div class="navbar">
+            <div class="logo">
+                <img src="image/Logo.png" alt="ThaiTicketMajor">
+            </div>
+            <div class="menu"> 
+                <span class="active" data-target="top">หน้าเเรก</span>
+                <span data-target="listing">รายการเเสดง</span>
+                <span data-target="product">สินค้าที่ระลึก</span>
+                <span data-target="variety">วาไรตี้</span>
+                <span data-target="promotion">โปรโมชั่น</span>
+            </div>
+            <div class="navbar-icon">
+                <a href="#"><i class="fa-solid fa-truck"></i></a>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#" class="has-dot"><i class="fa-regular fa-bell"></i><span class="dot-badge"></span></a>
+                <a href="#" class="login">เข้าสู่ระบบ</a>
+            </div>
+         </div>
+
+        <!-- Home -->
+         <div class="home">
+            <div class="banner">
+                <img class="slide active" src="image/Banner.png" alt="">
+                <img class="slide" src="image/Banner1.png" alt="">
+                <img class="slide" src="image/Banner2.png" alt="">
+                <img class="slide" src="image/Banner3.png" alt="">
+                <img class="slide" src="image/Banner4.png" alt="">
+                <div class="banner-dots" id="bannerDots"></div>
+            </div>
+         </div>
+
+        <!-- Search Bar -->
+         <div class="searchbar">
+            <div class="searchbox">
+                <div class="select-group">
+                    <select>
+                        <option>เลือกหมวดหมู่</option>
+                        <option>คอนเสิร์ต</option>
+                        <option>อีเวนต์</option>
+                        <option>นิทรรศการ</option>
+                    </select>
+                </div>
+                <div class="select-group">
+                    <select>
+                        <option>เลือกสถานที่</option>
+                        <option>อิมแพ็ค อารีน่า เมืองทองธานี</option>
+                        <option>ธันเดอร์โดม เมืองทองธานี</option>
+                        <option>ยูเนี่ยน ฮอลล์</option>
+                        <option>ไบเทคบางนา</option>
+                        <option>สนามราชมังคลากีฬาสถาน</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="searchinput" placeholder="ค้นหางานเเสดง / ศิลปิน">
+                </div>
+                <button class="searchbutton">ค้นหา</button>
+            </div>
+         </div>
+
+        <!-- Content -->
+         <div class="Content" id="listing">
+            <div class="sidebar">
+                <div class="filter">ตัวกรอง</div>
+                <div class="filter-group">
+                    <h4>หมวดหมู่</h4>
+                    <label><input type="checkbox" id="filterAll" checked>ทั้งหมด</label>
+                    <label><input type="checkbox" class="filter-sub" data-category="concert">คอนเสิร์ต</label>
+                    <label><input type="checkbox" class="filter-sub" data-category="event">อีเวนต์</label>
+                    <label><input type="checkbox" class="filter-sub" data-category="exhibit">นิทรรศการ</label>
+                </div>
+                <div class="filter-group">
+                    <h4>วันที่เเสดง</h4>
+                    <label><input type="checkbox" checked>ทุกวัน</label>
+                    <label><input type="checkbox">วันธรรมดา</label>
+                    <label><input type="checkbox">เสาร์-อาทิตย์</label>
+                    <label><input type="checkbox">วันหยุดนักขัตฤกษ์</label>
+                </div>
+            </div>
+            <div class="show-concert">
+                <div class="concert-header">
+                    <span class="text">รายการแสดงทั้งหมด</span>
+                </div>
+                <div class="concert-item">
+                    <!-- Concert1 -->
+                    <div class="card" data-category="concert" data-day="weekend">
+                        <div class="thumb">
+                            <span class="tag-hot">HOT</span>
+                            <img src="image/Concert1.png" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3 class="title">You Maniac Opening Night</h3>
+                            <p class="date"><i class="fa-regular fa-calendar"></i> 29 ส.ค. 2569</p>
+                            <p class="location"><i class="fa-solid fa-location-dot"></i> MCC HALL ชั้น 3 เดอะมอลล์ไลฟ์สโตร์ บางกะปิ</p>
+                        </div>
+                        <div class="action">
+                            <div class="price-start">ราคาเริ่มต้น</div>
+                            <div class="price">฿ 790</div>
+                            <button class="buy buy-outline">เร็วๆนี้</button>
+                        </div>
+                    </div>
+                    <!-- Concert2 -->
+                    <div class="card" data-category="concert" data-day="weekend">
+                        <div class="thumb">
+                            <span class="tag-hot">HOT</span>
+                            <img src="image/Concert2.png" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3 class="title">อรุณรุ่ง The Edge of Horizon Final EP with INNONGSA</h3>
+                            <p class="date"><i class="fa-regular fa-calendar"></i> 29 ส.ค. 2569</p>
+                            <p class="location"><i class="fa-solid fa-location-dot"></i> IDEA LIVE , BRAVO BKK</p>
+                        </div>
+                        <div class="action">
+                            <div class="price-start">ราคาเริ่มต้น</div>
+                            <div class="price">฿ 990</div>
+                            <button class="buy buy-outline">เร็วๆนี้</button>
+                        </div>
+                    </div>
+                    <!-- Concert3 -->
+                    <div class="card" data-category="event" data-day="weekday">
+                        <div class="thumb">
+                            <img src="image/Concert3.png" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3 class="title">การแสดงโขนมูลนิธิส่งเสริมศิลปาชีพฯ ตอน สีดา</h3>
+                            <p class="date"><i class="fa-regular fa-calendar"></i> 5 พ.ย. 2569 - 10 ธ.ค. 2569</p>
+                            <p class="location"><i class="fa-solid fa-location-dot"></i> ศูนย์วัฒนธรรมแห่งประเทศไทย หอประชุมใหญ่</p>
+                        </div>
+                        <div class="action">
+                            <div class="price-start">ราคาเริ่มต้น</div>
+                            <div class="price">฿ 600</div>
+                            <button class="buy">ซื้อบัตร</button>
+                        </div>
+                    </div>
+                    <!-- Concert4 -->
+                    <div class="card" data-category="event" data-day="weekday">
+                        <div class="thumb">
+                            <img src="image/Concert4.png" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3 class="title">เมืองมารยา เดอะมิวสิคัล</h3>
+                            <p class="date"><i class="fa-regular fa-calendar"></i> 17 ส.ค. 2569 - 27 ก.ย. 2569</p>
+                            <p class="location"><i class="fa-solid fa-location-dot"></i> เมืองไทยรัชดาลัย เธียเตอร์</p>
+                        </div>
+                        <div class="action">
+                            <div class="price-start">ราคาเริ่มต้น</div>
+                            <div class="price">฿ 1,500</div>
+                            <button class="buy">ซื้อบัตร</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="page">
+                    <span class="arrow" id="pagePrev"><i class="fa-solid fa-chevron-left"></i></span>
+                    <span class="page-number active">1</span>
+                    <span class="page-number">2</span>
+                    <span class="page-number">3</span>
+                    <span class="arrow" id="pageNext"><i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+            </div>
+         </div>
+
+        <!-- Product -->
+         <div class="product" id="product">
+            <div class="product-title">
+                <span class="text">สินค้าที่ระลึก</span>
+                <div class="tabs" id="productTabs">
+                    <span class="tab active" data-tab="new">สินค้ามาใหม่</span>
+                    <span class="tab" data-tab="all">สินค้าทั้งหมด</span>
+                </div>
+            </div>
+            <div class="product-divider"></div>
+            <div class="product-item" id="productItem">
+                <div class="item1">
+                    <div class="thumb">
+                        <img src="image/Product1.png" alt="">
+                    </div>
+                    <div class="info">
+                        <span class="tag-bestseller">ขายดี</span>
+                        <div class="name">Avenged Sevenfold - Official Merchandise</div>
+                        <div class="price-start">ราคาเริ่มต้น</div>
+                        <div class="price">฿ 1,100</div>
+                        <div class="button-add">ซื้อตอนนี้</div>
+                    </div>
+                </div>
+                <div class="item2">
+                    <div class="thumb">
+                        <img src="image/Product2.png" alt="">
+                    </div>
+                    <div class="info">
+                        <span class="tag-new">ใหม่</span>
+                        <div class="name">COLOUR SOUL FESTIVE - OH MY SUGAR</div>
+                        <div class="price-start">ราคาเริ่มต้น</div>
+                        <div class="price">฿ 2,900</div>
+                        <div class="button-add">ซื้อตอนนี้</div>
+                    </div>
+                </div>
+                <div class="item3">
+                    <div class="thumb">
+                        <img src="image/Product3.png" alt="">
+                    </div>
+                    <div class="info">
+                        <span class="tag-sale">ลดราคา</span>
+                        <div class="name">Mariah Carey The Emancipation of Mimi 2LP</div>
+                        <div class="price-start">ราคาเริ่มต้น</div>
+                        <div class="price">฿ 1,800</div>
+                        <div class="button-add">ซื้อตอนนี้</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Variety -->
+        <div class="variety" id="variety">
+            <div class="variety-title">
+                <span class="text">วาไรตี้</span>
+            </div>
+            <div class="variety-content">
+                <div class="variety-feature-wrap">
+                    <div class="variety-feature">
+                        <div class="thumb">
+                            <span class="tag-new">ใหม่ล่าสุด</span>
+                            <img src="image/Varity1.png" alt="">
+                        </div>
+                        <h3 class="title">บทสัมภาษณ์สุดพิเศษ ศิลปินระดับโลกก่อนขึ้นเวที</h3>
+                        <p class="desc">NOTTO หวนจับไมค์ ปล่อยเพลงจริงใจความทรงจำถึงมาอีกครั้ง "อย่าบอกว่ารัก" เวอร์ชั่น 2026</p>
+                    </div>
+                    <a href="#" class="view-all">ดูทั้งหมด &gt;&gt;&gt;</a>
+                </div>
+                <div class="variety-list">
+                    <div class="variety-item">
+                        <img src="image/Varity2.png" alt="">
+                        <div class="detail">
+                            <h4 class="title">POTATO จัดฉาย Exclusive Music Video Premiere ภาพยนตร์ "เพลิดเพลิน (Loop)" ก่อนปล่อยให้ชมพร้อมกันวันนี้</h4>
+                            <div class="tag-news">ข่าวบันเทิง</div>
+                            <a href="#" class="more-link">เพิ่มเติม...</a>
+                        </div>
+                    </div>
+                    <div class="variety-item">
+                        <img src="image/Varity3.png" alt="">
+                        <div class="detail">
+                            <h4 class="title">LUCY K-Band ที่ต้องฟังสดสักครั้งในชีวิต WalWalE ชาวไทยเจอกัน 28 พ.ย.นี้ ที่แจ้งวัฒนะ ฮอลล์</h4>
+                            <div class="tag-news">ข่าวบันเทิง</div>
+                            <a href="#" class="more-link">เพิ่มเติม...</a>
+                        </div>
+                    </div>
+                    <div class="variety-item">
+                        <img src="image/Varity4.png" alt="">
+                        <div class="detail">
+                            <h4 class="title">Ariana Grande คัมแบ็กอย่างสมศักดิ์ศรี ปล่อยอัลบั้ม petal เปิดตัวอันดับ 1 Billboard 200</h4>
+                            <div class="tag-news">ข่าวบันเทิง</div>
+                            <a href="#" class="more-link">เพิ่มเติม...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promotion -->
+        <div class="promotion" id="promotion">
+            <div class="promotion-title">สิทธิพิเศษ &amp; โปรโมชั่น</div>
+
+            <div class="flash-sale">
+                <div class="flash-info">
+                    <div class="tag-flash">FLASH SALE DEALS</div>
+                    <h3>ดีลตั๋วคอนเสิร์ตและอีเวนต์สุดพิเศษ ลดสูงสุด 50%</h3>
+                    <p>เฉพาะการสั่งซื้อผ่านแอปและเว็บไซต์ ThaiTicketMajor เท่านั้น</p>
+                </div>
+                <div class="flash-timer">
+                    <div class="timer-label">สิ้นสุดใน</div>
+                    <div class="timer-clock">
+                        <div class="time-block">
+                            <span class="time-num" id="cdDay">05</span>
+                            <span class="time-unit">วัน</span>
+                        </div>
+                        <span class="time-colon">:</span>
+                        <div class="time-block">
+                            <span class="time-num" id="cdHour">22</span>
+                            <span class="time-unit">ชั่วโมง</span>
+                        </div>
+                        <span class="time-colon">:</span>
+                        <div class="time-block">
+                            <span class="time-num" id="cdMin">18</span>
+                            <span class="time-unit">นาที</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flash-button-wrap">
+                    <button class="flash-button">ดูข้อเสนอพิเศษด่วน</button>
+                </div>
+            </div>
+
+            <div class="promo-grid">
+                <div class="promo-card">
+                    <div class="promo-detail">
+                        <h4>ส่วนลด 50%</h4>
+                        <p>ตั๋วคอนเสิร์ตและละครเวทีประจำสัปดาห์</p>
+                    </div>
+                    <button class="promo-button">เก็บคูปอง</button>
+                </div>
+                <div class="promo-card">
+                    <div class="promo-detail">
+                        <h4>ลดเพิ่ม 15%</h4>
+                        <p>สำหรับสมาชิกใหม่เมื่อซื้อครั้งแรก</p>
+                    </div>
+                    <button class="promo-button">เก็บโค้ด</button>
+                </div>
+                <div class="promo-card">
+                    <div class="promo-detail">
+                        <h4>ส่งฟรีทั่วไทย</h4>
+                        <p>เมื่อซื้อสินค้าที่ระลึกครบ 1,500 บาท</p>
+                    </div>
+                    <button class="promo-button">รับสิทธิ์</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <img src="image/Logo.png" alt="ThaiTicketMajor">
+                    <p>บริษัท ไทยทิคเก็ตเมเจอร์ จำกัด</p>
+                    <p>3199 อาคารมาลีนนท์ทาวเวอร์ ชั้น 27, ถนนพระราม 4,<br>แขวงคลองตัน, เขตคลองเตย, กรุงเทพฯ 10110</p>
+                    <div class="social">
+                        <a href="#" class="social-fb"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-ig"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-yt"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-x"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>ไทยทิคเก็ตเมเจอร์</h5>
+                    <a href="#">เกี่ยวกับเรา</a>
+                    <a href="#">นโยบายความเป็นส่วนตัว</a>
+                    <a href="#">เงื่อนไขการใช้บริการ</a>
+                    <a href="#">จุดจำหน่าย</a>
+                    <a href="#">ติดต่อลงโฆษณา</a>
+                    <a href="#">ร่วมงานกับเรา</a>
+                </div>
+                <div class="footer-col">
+                    <h5>บริการ</h5>
+                    <a href="#">ทุกงานแสดง</a>
+                    <a href="#">สินค้าที่ระลึก</a>
+                    <a href="#">วาไรตี้</a>
+                    <a href="#">โปรโมชั่น</a>
+                    <a href="#">Ticket Protect</a>
+                </div>
+                <div class="footer-col">
+                    <h5>ช่วยเหลือ</h5>
+                    <a href="#">ติดต่อเรา</a>
+                    <a href="#">คำถามที่พบบ่อย</a>
+                    <a href="#">วิธีการชำระเงิน</a>
+                    <a href="#">สมัคร/ยกเลิกรับข่าวสาร</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 THAITICKETMAJOR All Rights Reserved.</p>
+                <p><i class="fa-solid fa-phone"></i> 02 262 3456 <span class="contact-divider">|</span> <i class="fa-solid fa-envelope"></i> cs@thaiticketmajor.com</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
